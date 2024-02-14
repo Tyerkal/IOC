@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"https://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+ 
+	<bean id ="c"  class="com.Car" scope="singleton">
+	<property name="cid" value="55"></property>
+	<property name="cname" value="Mercedes"></property>
+	<property name="engine" ref="e"></property>
+	<lookup-method name="getEngine"/>
+	</bean>
+
+	<bean id ="e"  class="com.Engine" scope="prototype">
+	<property name="eid" value="11"></property>
+	<property name="ename" value="v8"></property>
+	</bean>
+	
+	
+	
+
+</beans>
